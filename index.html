@@ -1,10 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Web design snippets</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- insert fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    <!-- include font-awesome -->
+    <script src="https://use.fontawesome.com/9bbf287de8.js"></script>
+    <!-- include jQuery & Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <style>
+        h1 {
+            padding-bottom: 8%;
+            font-size: 2.3rem;
+
+        }
+
+        h2, h3, h4 {
+            font-family: 'Ubuntu Condensed', sans-serif;
+        }
+
+        .logoStyle {
+            font-family: 'Ubuntu Condensed', sans-serif;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .footer {
+            margin-top: 15%;
+        }
+
+        #top {
+            padding-top: 5%;
+        }
+
+        #myLogoSmall {
+            font-family: 'Ubuntu Condensed', sans-serif;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-decoration: none;
+            color: #000000;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello world!</h1>
+
+<div class="container">
+
+    <div id="top" class="text-center mt-5 mt-lg-0">
+        <h1><span class="logoStyle">&#62;Petros Dolianitis&#60;</span><br/><br/><small><code class="text-muted small">&#160;/* web design snippets */&#160;</code></small></h1>
+    </div>
+
+    <div class="row justify-content-center">
+        <div id="photo-gallery" class="col-sm-6 col-lg-4">
+            <div class="card">
+                <div class="card-block alert-success">
+                    <h3 class="card-title">Photo Gallery</h3>
+                    <p class="card-text">
+                        A photo gallery designed from scratch with animations and a slide-show option.<br/>
+                        <small><b>HTML | CSS<sub>3</sub> | jQuery</b></small>
+                    </p>
+                    <a href="photo-gallery/gallery.html" target="_blank" class="btn btn-success">See it</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- end .container -->
+
+<footer class="footer">
+    <div class="container-fluid text-center">
+        designed by <a id="myLogoSmall" href="https://petedol87.github.io/" target="_blank"> &#62;Petros Dolianitis&#60;</a>
+    </div>
+</footer>
+
 </body>
 </html>

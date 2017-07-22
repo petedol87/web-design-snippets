@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photo Gallery</title>
+    <!-- include external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="slide-number">1 / 6</div>
+
+    <img id="img-0" src="images/01-luxembourg.jpg">
+    <img id="img-1" class="hidden" src="images/02-kinetta.jpg">
+    <img id="img-2" class="hidden" src="images/03-geneve.jpg">
+    <img id="img-3" class="hidden" src="images/04-lake-doxa.jpg">
+    <img id="img-4" class="hidden" src="images/05-rome.jpg">
+    <img id="img-5" class="hidden" src="images/06-vancouver.jpg">
+
+    <div id="popup" class="hidden">
+        <div id="dialog">Do you want to start the slideshow again?</div>
+        <button class="button" onclick="repeatSlideShow()">OK</button>
+        <button class="button" onclick="stopSlideShow()">Stop</button>
+    </div>
+
+    <div style="text-align: center">
+        <button id="previous" class="button" onclick="previousSlide()">Previous</button>
+        <button id="play" class="button" style="width: 50px" onclick="autoSlideShow()"> &#9658;</button>
+        <button id="next" class="button" onclick="nextSlide()">Next</button>
+    </div>
+
+</div> <!-- end #container -->
+
+<!-- include jQuery -->
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+</script>
+<!-- include external JavaScript-->
+<script src="script.js"></script>
+
+</body>
+</html>
