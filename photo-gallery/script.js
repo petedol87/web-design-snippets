@@ -20,11 +20,10 @@ function nextSlide() {
     else {
         // hide current image and show next:
         slides[index].fadeOut(500, function () {
-            index++;
-            slides[index].fadeIn(500, function () {
+            slides[++index].fadeIn(500, function () {
                 $("#next").prop("disabled", false);     // enable button again
+                $("#slide-number").html(index + 1 + " / 6");
             });
-            $("#slide-number").html(index + 1 + " / 6");
         });
     }
 }
@@ -39,11 +38,10 @@ function previousSlide() {
     else {
         // hide current image and show previous:
         slides[index].fadeOut(500, function () {
-            index--;
-            slides[index].fadeIn(500, function () {
+            slides[--index].fadeIn(500, function () {
                 $("#previous").prop("disabled", false);     // enable button again
+                $("#slide-number").html(index + 1 + " / 6");
             });
-            $("#slide-number").html(index + 1 + " / 6");
         });
     }
 }
@@ -62,11 +60,10 @@ function autoSlideShow() {
         else {
             // hide current image and show next:
             slides[index].fadeOut(500, function () {
-                index++;
-                slides[index].fadeIn(500, function () {
+                slides[++index].fadeIn(500, function () {
                     $("#previous, #next").prop("disabled", false);  // enable buttons again
+                    $("#slide-number").html(index + 1 + " / 6");
                 });
-                $("#slide-number").html(index + 1 + " / 6");
             });
         }
     }, 3500);   // 0.5s more for the fading animation
@@ -81,10 +78,11 @@ function repeatSlideShow() {
     $('#popup').hide();
     // go back to start:
     slides[5].fadeOut(500, function () {
-        slides[0].fadeIn(500);
-        index = 0;
-        $("#slide-number").html("1 / 6");
-        autoSlideShow();
+        slides[0].fadeIn(500, function () {
+            index = 0;
+            $("#slide-number").html("1 / 6");
+            autoSlideShow();
+        });
     });
 }
 
